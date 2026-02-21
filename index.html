@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <title>PhishGuard</title>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!-- LOGIN -->
+
+<section id="login" class="active">
+
+  <div class="card">
+
+    <h1>PhishGuard</h1>
+
+    <p>Learn to Detect Phishing Before It Detects You</p>
+
+    <input id="username" placeholder="Enter your name">
+
+    <button onclick="login()">Start Learning</button>
+
+  </div>
+
+</section>
+
+<!-- DASHBOARD -->
+
+<section id="dashboard">
+
+  <h2 id="welcome"></h2>
+
+  <p id="levelInfo"></p>
+
+  <div class="progress"><div id="xpBar" class="bar"></div></div>
+
+  <button onclick="show('scan')">Scan Message</button>
+
+  <button onclick="startGame()">Play Game</button>
+
+  <button onclick="showHistory()">History</button>
+
+  <button onclick="logout()">Logout</button>
+
+</section>
+
+<!-- SCANNER -->
+
+<section id="scan">
+
+  <h2>Message & Link Analyzer</h2>
+
+  <textarea id="messageInput" placeholder="Paste message or link here..."></textarea>
+
+  <button onclick="scanMessage()">Analyze</button>
+
+  <div id="result"></div>
+
+  <button onclick="show('dashboard')">Back</button>
+
+</section>
+
+<!-- GAME -->
+
+<section id="game">
+
+  <h2>Phishing Prevention Challenge</h2>
+
+  <p id="question"></p>
+
+  <div id="options"></div>
+
+  <p id="feedback"></p>
+
+  <p id="score"></p>
+
+  <button onclick="show('dashboard')">Back</button>
+
+</section>
+
+<!-- HISTORY -->
+
+<section id="history">
+
+  <h2>Scan History</h2>
+
+  <ul id="historyList"></ul>
+
+  <button onclick="show('dashboard')">Back</button>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
